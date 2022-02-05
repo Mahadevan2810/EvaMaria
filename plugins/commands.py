@@ -66,7 +66,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "⭕️ Join Updates Channel⭕️", url=invite_link.invite_link
+                    "⭕️ Join Main Channel⭕️", url=invite_link.invite_link
                 )
             ]
         ]
@@ -75,7 +75,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join our main channel to use this Bot!**",
+            text="**താഴെ കാണുന്ന buttonil കേറി നമ്മുടെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്തതിനു ശേഷം try again കൊടുക്കുമ്പോൾ ഫയൽ കിട്ടുന്നത് ആണ്. Join our main channel to use this bot!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
